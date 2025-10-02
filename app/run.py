@@ -1,10 +1,10 @@
-# import tabulate
 import logging
 import sys
-import os 
 
 from app.parser import ArgumentoCli
-
+from app.core import Relatorio
+from app.csv import ReadCSV
+from app.output import Export
 
 # Configuração do logging
 logging.basicConfig(
@@ -16,10 +16,17 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-def main(args=None):
-    return ArgumentoCli(args=args)
+def main(args=None): 
+    relatorio = Relatorio()
+    read_csv = ReadCSV()
+    export = Export()  # Certifique-se de que a classe Export está definida em algum lugar
+    return ArgumentoCli(
+        args=args, 
+        relatorio=relatorio, 
+        reader_csv=read_csv, 
+        export=export
+    )
 
 
 if __name__== "__main__":
-    logger.info('Iniciando CLI ...')
-    main()
+    main(sys.argv[1:])
