@@ -1,0 +1,8 @@
+import csv
+
+def read_csv(file_path):
+
+    with open(file_path, mode='r', newline='', encoding='utf-8', delimiter=' ', quotechar='|') as csvfile:
+        reader = csv.DictReader(csvfile)
+        return [row for row in reader]
+

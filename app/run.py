@@ -16,8 +16,8 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-def main():
-    parser = ArgumentoCli()
+def main(args=None):
+    return ArgumentoCli(args=args)
 
 
 if __name__== "__main__":
