@@ -26,7 +26,7 @@ vendas-cli <arquivo.csv> [opções]
 ### Opções disponíveis
 - `-s`, `--start`: Data inicial no formato `YYYY-MM-DD` (filtra vendas a partir desta data)
 - `-e`, `--end`: Data final no formato `YYYY-MM-DD` (filtra vendas até esta data)
-- `-f`, `--format`: Formato de saída (`json` ou `text`). Padrão: `text`
+- `-f`, `--format`: Formato de saída (`json` ou `text`)
 
 ### Exemplos de uso
 
