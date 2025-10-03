@@ -72,7 +72,7 @@ class Relatorio:
         mais_vendidos = {prod: qtd for prod, qtd in vendas.items() if qtd == max_qtd}
         return mais_vendidos
     
-    def data_produto_valida(self, data_str) -> bool:
+    def data_produto_valida(self, data_str: str) -> bool:
         """
         Valida data se está dentro do intervalo start e end.
         Args:
@@ -93,7 +93,7 @@ class Relatorio:
         except ValueError:
             return False
         
-    def valor_eh_valido(self, valor_str) -> bool:
+    def valor_eh_valido(self, valor_str: str) -> bool:
         """
         Valida se o valor é um float válido.
 

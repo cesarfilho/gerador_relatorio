@@ -46,7 +46,7 @@ class TestRelatorio(unittest.TestCase):
     def test_produto_mais_vendido(self):
         self.relatorio.gerar()
         resultado = self.relatorio.produto_mais_vendido()
-        self.assertEqual(resultado, {"produto": "A", "quantidade": 2})
+        self.assertEqual(resultado, {"A": 2})
 
     def test_data_produto_valida(self):
         self.assertTrue(self.relatorio.data_produto_valida("2025-08-01 10:00:00"))

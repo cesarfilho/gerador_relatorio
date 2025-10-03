@@ -2,7 +2,7 @@ import csv
 
 class ReadCSV():
 
-    def read_csv(self, file_path):
+    def read_csv(self, file_path: str):
 
         with open(file_path, mode='r', newline='', encoding='utf-8') as csvfile:
             reader = csv.reader(csvfile)

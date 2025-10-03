@@ -2,22 +2,22 @@ import json
 from tabulate import tabulate
 
 class Export():
-    def exportar(self, dados, formato):
+    def exportar(self, dados:dict[str,any], formato: str) -> None:
         if formato == 'json':
             self.exportar_json(dados)
         elif formato == 'text':
             self.exportar_text(dados)
 
 
-    def exportar_json(self, dados):
+    def exportar_json(self, dados:dict[str,any]) -> None:
         print(json.dumps(dados, indent=4))
 
 
-    def exportar_text(self, dados):
+    def exportar_text(self, dados:dict[str,any]) -> None:
         """
         Exporta os dados em formato tabulado.
         Args:
-            dados (dict ou list): Dados a serem exportados, podendo conter subdocumentos.
+            dados dict : Dados a serem exportados, podendo conter subdocumentos.
         """
         if isinstance(dados, dict):
             dados = [dados]

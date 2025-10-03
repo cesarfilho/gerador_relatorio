@@ -1,7 +1,5 @@
 from setuptools import setup
 
-from setuptools import setup
-
 setup(
     name="vendas-cli",
     version="1.0",
