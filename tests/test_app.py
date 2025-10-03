@@ -5,28 +5,49 @@ from app.run import main
 from app.parser import ArgumentoCli
 
 class TestApp(unittest.TestCase):
+    
+    def test_arg_format_text(self):
+        pargs = ["teste.csv", "--format", "text"]
+        p = ArgumentoCli(args=pargs)
+        _args = p.parser.parse_args(pargs)
+        self.assertEqual(_args.filename, "teste.csv")
+        self.assertEqual(_args.format, "text")
 
+    def test_arg_format_json(self):
+        pargs = ["teste.csv", "--format", "json"]
+        p = ArgumentoCli(args=pargs)
+        _args = p.parser.parse_args(pargs)
+        self.assertEqual(_args.filename, "teste.csv")
+        self.assertEqual(_args.format, "json")
+
+    def test_arg_data_inicio(self):
+        pargs = ["teste.csv", "--start", "2023-01-01"]
+        p = ArgumentoCli(args=pargs)
+        _args = p.parser.parse_args(pargs)
+        self.assertEqual(_args.start, "2023-01-01")
+
+    def test_arg_data_fim(self):
+        pargs = ["teste.csv", "--end", "2023-12-31"]
+        p = ArgumentoCli(args=pargs)
+        _args = p.parser.parse_args(pargs)
+        self.assertEqual(_args.end, "2023-12-31")
+
+    def test_arg_missing_filename(self):
+        pargs = []
+        p = ArgumentoCli(args=pargs)
+        with self.assertRaises(SystemExit):
+            p.parser.parse_args(pargs)
+
+    def test_arg_help(self):
+        pargs = ["--help"]
+        p = ArgumentoCli(args=pargs)
+        with self.assertRaises(SystemExit):
+            p.parser.parse_args(pargs)
 
     def test_app_inicial(self):
         p = main(args=["teste.csv"])
         self.assertIsNotNone(p)
         self.assertIsInstance(p, ArgumentoCli)
-
-
-    def test_arg_format(self):
-        self.fail("implementar")
-    
-    def test_arg_format_json(self):
-        self.fail("implementar")
-
-    def test_arg_format_text(self):
-        self.fail("implementar")
-    
-    def test_arg_data_inicio(self):
-        self.fail("implementar")
-
-    def test_arg_data_fim(self):
-        self.fail("implementar")
 
     def test_arg_main(self):
         pargs = ["teste.csv", "--start", "2023-01-01"]
@@ -39,10 +60,3 @@ class TestApp(unittest.TestCase):
         self.assertEqual(_args.start, "2023-01-01")
         self.assertIsNone(_args.end)
         self.assertIsNone(_args.format)
-
-
-    # def test_app_none(self):
-    #     p = main()
-    #     self.assertIsNotNone(p)
-    #     self.assertIsInstance(p, ArgumentoCli)
-

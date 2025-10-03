@@ -1,4 +1,4 @@
-import csv
+import csv 
 
 class ReadCSV():
 
@@ -7,12 +7,14 @@ class ReadCSV():
         with open(file_path, mode='r', newline='', encoding='utf-8') as csvfile:
             reader = csv.reader(csvfile)
             header = next(reader)
-            return [
+            header = header[0].split(";")
+            a= [
                 {
-                    "nome_produto": row[0].split(";")[0],
-                    "valor": row[0].split(";")[1],
-                    "data_venda": row[0].split(";")[2],
+                    k:v for k,v in zip(header, row[0].split(";"))
                 }
                 for row in reader
             ]
+            return a
 
+    def read_csv_quantidade(self, file_path:str, quantidade:int):
+        return self.read_csv(file_path)[:quantidade]

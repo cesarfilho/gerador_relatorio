@@ -1,7 +1,8 @@
 import argparse
 import sys
+from venv import logger
 
-from app.csv import ReadCSV
+from app.file import ReadCSV
 from app.core import Relatorio
 
 
@@ -48,6 +49,8 @@ class ArgumentoCli:
         filename = self.parser.parse_args().filename
 
         dados = self.read_csv.read_csv(filename)
+        logger.info(f"Lendo arquivo: {filename} com {len(dados)} linhas")
+
         self.relatorio.parametros(
             data=dados,
             start=start,

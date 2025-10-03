@@ -24,10 +24,11 @@ Crie uma **CLI em Python** que processe um arquivo CSV de vendas e gere relatór
 - Testes unitários com **pytest** cobrindo ao menos 80% do código.  
 
 ## Exemplo de uso
-- $ pip install .
-- $ vendas-cli vendas.csv --format text
-- $ vendas-cli vendas.csv --format json --start 2025-01-01 --end 2025-03-31
-
+~~~bash
+$ pip install .
+$ vendas-cli vendas.csv --format text
+$ vendas-cli vendas.csv --format json --start 2025-01-01 --end 2025-03-31
+~~~
 
 ## Entrega
 - Repositório público no GitHub com código-fonte organizado.  

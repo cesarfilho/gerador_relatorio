@@ -3,7 +3,7 @@ import sys
 
 from app.parser import ArgumentoCli
 from app.core import Relatorio
-from app.csv import ReadCSV
+from app.file import ReadCSV
 from app.output import Export
 
 # Configuração do logging
@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 def main(args=None): 
     relatorio = Relatorio()
     read_csv = ReadCSV()
-    export = Export()  # Certifique-se de que a classe Export está definida em algum lugar
+    export = Export()
     return ArgumentoCli(
         args=args, 
         relatorio=relatorio, 
