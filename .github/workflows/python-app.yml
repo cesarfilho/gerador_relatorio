@@ -39,7 +39,7 @@ jobs:
         echo "PYTHONPATH=$PWD" >> $GITHUB_ENV
     - name: Test with pytest
       run: |
-        pytest
+        pytest --cov --cov-branch --cov-report=xml
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v5
       with:
