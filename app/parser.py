@@ -34,7 +34,8 @@ class ArgumentoCli:
         end = getattr(parsed, "end", None)
         filename = getattr(parsed, "filename", None)
         if not filename:
-            return None
+            self.parser.print_help()
+            sys.exit(1) 
             
         dados = self.read_csv.read_csv(filename)
         logger.info(f"Lendo arquivo: {filename} com {len(dados)} linhas")
