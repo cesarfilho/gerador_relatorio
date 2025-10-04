@@ -1,6 +1,6 @@
 ## Gerador de Relatórios CSV - CLI
 ![Build Status](https://github.com/cesarfilho/gerador_relatorio/actions/workflows/python-app.yml/badge.svg)
-![Coverage](https://codecov.io/gh/cesarfilho/gerador_relatorio/branch/master/graph/badge.svg)
+![![codecov](https://codecov.io/gh/cesarfilho/gerador_relatorio/graph/badge.svg?token=DMURX0P8T9)](https://codecov.io/gh/cesarfilho/gerador_relatorio)
 ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)
 ![License](https://img.shields.io/github/license/cesarfilho/gerador_relatorio)
 
