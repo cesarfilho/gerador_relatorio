@@ -2,7 +2,7 @@
 ![Build Status](https://github.com/cesarfilho/gerador_relatorio/actions/workflows/python-app.yml/badge.svg)
 [![codecov](https://codecov.io/gh/cesarfilho/gerador_relatorio/graph/badge.svg?token=DMURX0P8T9)](https://codecov.io/gh/cesarfilho/gerador_relatorio)
 ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)
-![License](https://img.shields.io/github/license/cesarfilho/gerador_relatorio)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 Este projeto fornece uma interface de linha de comando (CLI) para gerar relatórios a partir de arquivos CSV de vendas.
 
