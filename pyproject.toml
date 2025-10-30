@@ -7,7 +7,7 @@ name = "vendas-cli"
 version = "1.0.0"
 description = "CLI para gerar relatórios a partir de CSV de vendas"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.13"
 authors = [{ name = "Cesar Filho" }]
 license = { file = "LICENSE" }
 dependencies = [
