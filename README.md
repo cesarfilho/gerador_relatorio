@@ -53,22 +53,30 @@ O relatório exibe:
 
 ### Requisitos
 - Python 3.8+
-- Instalar dependências com:
+- Gerenciador de pacotes: `uv`
+
+Instale as dependências com `uv`:
 ```bash
-pip install -r requirements.txt
+uv sync
 ```
 
 ### Instalação do vendas-cli
-Se desejar instalar o comando `vendas-cli` globalmente, execute:
+Se desejar instalar o comando `vendas-cli` globalmente, você pode usar o `uv`:
 
 ```bash
-pip install .
+uv pip install .
 ```
 
-Ou, para instalar em modo desenvolvimento:
+Ou, para instalar em modo desenvolvimento (editable):
 
 ```bash
-pip install -e .
+uv pip install -e .
 ```
 
 Após a instalação, o comando `vendas-cli` estará disponível no terminal.
+
+### Testes
+Para rodar os testes com `uv`:
+```bash
+uv run pytest
+```

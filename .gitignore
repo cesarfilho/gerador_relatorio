@@ -123,3 +123,7 @@ cython_debug/
 
 .csv
 *.csv
+
+.conda
+.conda/
+.conda/*

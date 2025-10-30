@@ -1,6 +1,6 @@
-test: 
-	pytest
-install: 
-	pip install -r requirements.txt
-setup: 
-	pip install .
+test:
+	uv run pytest
+install:
+	uv sync
+setup:
+	uv sync
