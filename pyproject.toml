@@ -25,4 +25,5 @@ vendas-cli = "app.run:main"
 # grupo para ferramentas de teste/desenvolvimento
 test = [
   "pytest>=7",
+  "pytest-cov>=7.0.0",
 ]
